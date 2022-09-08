@@ -72,6 +72,7 @@ namespace Login
             // 
             this.txtpass.BackColor = System.Drawing.SystemColors.MenuText;
             this.txtpass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtpass.ForeColor = System.Drawing.SystemColors.Window;
             this.txtpass.Location = new System.Drawing.Point(199, 160);
             this.txtpass.Name = "txtpass";
             this.txtpass.PasswordChar = '*';

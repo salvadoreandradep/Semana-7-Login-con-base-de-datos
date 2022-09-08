@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using System.Data.SqlClient;
 
 
 namespace Login
@@ -15,7 +16,7 @@ namespace Login
     public partial class Form1 : Form
     {
 
-        OleDbConnection conexion = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=login.mdb");
+        OleDbConnection conexion = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=[DataDirectory]\\login.accdb");
         public Form1()
         {
             InitializeComponent();
@@ -52,7 +53,7 @@ namespace Login
             if (existereg)
             {
                 MessageBox.Show("bienvenido al sistema" + txtusuario.Text);
-                Form1 f1 = new Form1();
+                Form2 f1 = new Form2();
                 f1.Show();
                 this.Hide();
 
