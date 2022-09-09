@@ -82,7 +82,7 @@ namespace Login
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.Info;
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.pictureBox1.Location = new System.Drawing.Point(-11, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(553, 50);
