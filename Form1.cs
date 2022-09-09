@@ -19,7 +19,7 @@ namespace Login
     public partial class Form1 : Form
     {
         
-        OleDbConnection conexion = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=[DataDirectory]\\login.accdb");
+        OleDbConnection conexion = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\salva\OneDrive\Escritorio\login.mdb");
         
         public Form1()
         {
@@ -54,7 +54,7 @@ namespace Login
         {
             
             string consulta = "select password,usuario from login where password ='" + txtpass.Text + "' and usuario = '" + txtusuario.Text + "';";
-            OleDbCommand comando = new OleDbCommand(consulta, conexion);
+            OleDbCommand comando = new OleDbCommand(consulta , conexion);
             OleDbDataReader leedb;
             leedb = comando.ExecuteReader();
             Boolean existereg = leedb.HasRows;
