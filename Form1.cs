@@ -19,7 +19,7 @@ namespace Login
     public partial class Form1 : Form
     {
         
-        OleDbConnection conexion = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\salva\OneDrive\Escritorio\login.mdb");
+        OleDbConnection conexion = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\salva\source\repos\Semana-7-Login-con-base-de-datos\basededatosaccess\Database1.mdb");
         
         public Form1()
         {
@@ -53,7 +53,7 @@ namespace Login
         private void button1_Click(object sender, EventArgs e)
         {
             
-            string consulta = "select password,usuario from login where password ='" + txtpass.Text + "' and usuario = '" + txtusuario.Text + "';";
+            string consulta = "select clave, usuario from usuarios where clave ='" + txtpass.Text + "' and usuario = '" + txtusuario.Text + "';";
             OleDbCommand comando = new OleDbCommand(consulta , conexion);
             OleDbDataReader leedb;
             leedb = comando.ExecuteReader();
