@@ -38,7 +38,7 @@ namespace Login
 
                 sqlnet.Open();
                 conexion.Open();
-                MessageBox.Show("Conectada");
+                MessageBox.Show("Se ha conectado a los servidores de manera exitosa");
            
             }
             catch (Exception a)
@@ -101,6 +101,15 @@ namespace Login
         private void button3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+            MessageBox.Show("Saliendo", " Aviso ", MessageBoxButtons.OK);
+
+           
+            Close();
         }
     }
   }
